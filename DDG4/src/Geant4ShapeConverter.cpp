@@ -270,7 +270,7 @@ namespace dd4hep {
                                       ABSOLUTE);
         }
         else if ( nv == 4 )    {
-          const auto& v3 = sh->GetVertex(facet.GetVertexIndex(3));
+          const auto& v3 = sh->GetVertex(facet[3]);
           g4f = new G4QuadrangularFacet(G4ThreeVector(v0.x() * CM_2_MM, v0.y() * CM_2_MM, v0.z() * CM_2_MM),
                                         G4ThreeVector(v1.x() * CM_2_MM, v1.y() * CM_2_MM, v1.z() * CM_2_MM),
                                         G4ThreeVector(v2.x() * CM_2_MM, v2.y() * CM_2_MM, v2.z() * CM_2_MM),
