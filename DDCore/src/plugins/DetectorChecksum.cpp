@@ -553,7 +553,7 @@ const DetectorChecksum::entry_t& DetectorChecksum::handleSolid(Solid solid) cons
             except("DetectorChecksum","+++ TGeoTessellated volume with unsupported number of vertices: %s", solid.name());
           }
           for (int ivertex = 0; ivertex < facet.GetNvert(); ivertex++) {
-            log << " vertex" << ivertex + 1 << "=\"" << nam << "_v" << facet.GetVertexIndex(ivertex) << "\"";
+            log << " vertex" << ivertex + 1 << "=\"" << nam << "_v" << facet[ivertex] << "\"";
           }
           log << " type=\"ABSOLUTE\"/>" << newline;
         }

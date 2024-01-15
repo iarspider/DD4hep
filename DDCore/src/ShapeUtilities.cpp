@@ -434,7 +434,7 @@ namespace dd4hep {
       const TGeoFacet& f = sh->GetFacet(i);
       pars.emplace_back(double(f.GetNvert()));
       for(int j=0, n=f.GetNvert(); j<n; ++j)
-        pars.emplace_back(double(f.GetVertexIndex(j)));
+        pars.emplace_back(double(f[j]));
     }
     return pars;
   }

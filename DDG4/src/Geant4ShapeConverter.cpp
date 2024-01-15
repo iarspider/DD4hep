@@ -259,9 +259,9 @@ namespace dd4hep {
       for(int i=0; i<num_facet; ++i)  {
         const TGeoFacet& facet = sh->GetFacet(i);
         int nv = facet.GetNvert();
-        const auto& v0 = sh->GetVertex(facet.GetVertexIndex(0));
-        const auto& v1 = sh->GetVertex(facet.GetVertexIndex(1));
-        const auto& v2 = sh->GetVertex(facet.GetVertexIndex(2));
+        const auto& v0 = sh->GetVertex(facet[0]);
+        const auto& v1 = sh->GetVertex(facet[1]);
+        const auto& v2 = sh->GetVertex(facet[2]);
         G4VFacet* g4f = 0;
         if ( nv == 3 )    {
           g4f = new G4TriangularFacet(G4ThreeVector(v0.x() * CM_2_MM, v0.y() * CM_2_MM, v0.z() * CM_2_MM),
